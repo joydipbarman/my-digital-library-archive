@@ -1,74 +1,62 @@
 [
   {
-    "title": "NEP 2020 M.Lib.I.Sc. Official Syllabus (2025–2026)",
-    "author": "Vidyasagar University",
-    "semester": "General",
-    "paperCode": "SYLLABUS",
-    "paperTitle": "Curriculum & Credit Structure",
-    "type": "Syllabus PDF",
-    "fileUrl": "pdfs/syllabus-nep2020.pdf"
+    "title": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "year": 1813,
+    "category": "Fiction",
+    "format": "EBook",
+    "description": "A classic novel of manners, marriage and misjudgment. Public domain.",
+    "tags": ["classic", "romance"],
+    "url": "https://www.gutenberg.org/ebooks/1342",
+    "cover": "",
+    "added": "2026-11-17"
   },
   {
-    "title": "Prolegomena to Library Classification (3rd Ed.)",
-    "author": "S. R. Ranganathan",
-    "semester": "Semester 1",
-    "paperCode": "LIS-IKS-501",
-    "paperTitle": "Indian Knowledge Organization System",
-    "type": "Reference eBook",
-    "fileUrl": "pdfs/lis-iks-501-prolegomena.pdf"
+    "title": "The Art of War",
+    "author": "Sun Tzu",
+    "year": -500,
+    "category": "Philosophy",
+    "format": "EBook",
+    "description": "Ancient Chinese treatise on strategy. Public domain translation.",
+    "tags": ["strategy", "classic"],
+    "url": "https://www.gutenberg.org/ebooks/132",
+    "cover": "",
+    "added": "2026-11-17"
   },
   {
-    "title": "Foundations of Information Science",
-    "author": "David Bawden & Lyn Robinson",
-    "semester": "Semester 1",
-    "paperCode": "LIS-DSC-502",
-    "paperTitle": "Information and Communication Theories",
-    "type": "Reference eBook",
-    "fileUrl": "pdfs/lis-dsc-502-foundations.pdf"
+    "title": "A Sample Local PDF",
+    "author": "Your Name",
+    "year": 2026,
+    "category": "Notes",
+    "format": "PDF",
+    "description": "Example of a file stored in this repository's books/ folder. Replace the url with your own file.",
+    "tags": ["sample"],
+    "url": "books/sample.pdf",
+    "cover": "",
+    "added": "2026-11-17"
   },
   {
-    "title": "Practical Open Source Software for Libraries",
-    "author": "Nicole C. Engard",
-    "semester": "Semester 1",
-    "paperCode": "LIS-DSC-507",
-    "paperTitle": "ICT for LIS (Theory) - I",
-    "type": "Reference eBook",
-    "fileUrl": "pdfs/lis-dsc-507-oss-libraries.pdf"
+    "title": "Let Us C (5th Edition)",
+    "author": "Yashavant P. Kanetkar",
+    "year": 2004,
+    "category": "Programming",
+    "format": "PDF",
+    "description": "A widely used introduction to the C programming language, covering basics through pointers, structures and file handling.",
+    "tags": ["c", "programming", "textbook"],
+    "url": "",
+    "cover": "",
+    "added": "2026-11-17"
   },
   {
-    "title": "Generative AI and Libraries: Claiming Our Place",
-    "author": "M. Hanegan & C. Rosser",
-    "semester": "Semester 1",
-    "paperCode": "LIS-DSE-510B",
-    "paperTitle": "AI/ML in Libraries",
-    "type": "Elective eBook",
-    "fileUrl": "pdfs/lis-dse-510b-ai-libraries.pdf"
-  },
-  {
-    "title": "Introduction to Modern Information Retrieval",
-    "author": "G. G. Chowdhury",
-    "semester": "Semester 2",
-    "paperCode": "LIS-DSC-552",
-    "paperTitle": "Intelligent Information Retrieval",
-    "type": "Reference eBook",
-    "fileUrl": "pdfs/lis-dsc-552-modern-ir.pdf"
-  },
-  {
-    "title": "Measuring Academic Research: Bibliometric Study Guide",
-    "author": "Ana Andrés",
-    "semester": "Semester 2",
-    "paperCode": "LIS-DSC-553",
-    "paperTitle": "Studies of Research Metrics",
-    "type": "Reference eBook",
-    "fileUrl": "pdfs/lis-dsc-553-bibliometrics.pdf"
-  },
-  {
-    "title": "Library Automation through Koha",
-    "author": "Parthasarathi Mukhopadhyay",
-    "semester": "Semester 2",
-    "paperCode": "LIS-DSC-556",
-    "paperTitle": "Application of ICT in LIS (Practice) - II",
-    "type": "Practical Manual",
-    "fileUrl": "pdfs/lis-dsc-556-koha.pdf"
+    "title": "Research Methodology (M.Lib.I.Sc, VU)",
+    "author": "Dr. Bidyarthi Dutta, DLIS-VU",
+    "year": 2026,
+    "category": "Library Science",
+    "format": "PDF",
+    "description": "Lecture notes prepared from course slides: fundamentals of research, research design, sampling, hypothesis testing, data collection, ethnographic research and evaluation of research. 44 pages.",
+    "tags": ["research", "methodology", "mlis", "lecture-notes"],
+    "url": "books/research-methodology-mlis.pdf",
+    "cover": "",
+    "added": "2026-11-17"
   }
 ]
