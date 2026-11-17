@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>M.Lib.I.Sc. Digital eBook Repository | Vidyasagar University (NEP 2020)</title>
+  <style>
+    :root {
+      --primary: #1e3a8a;
+      --primary-light: #eff6ff;
+      --accent: #0f766e;
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --text: #1e293b;
+      --muted: #64748b;
+      --border: #e2e8f0;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+    header {
+      background: linear-gradient(135deg, #1e3a8a, #1d4ed8);
+      color: white;
+      padding: 2.2rem 1rem;
+      text-align: center;
+    }
+    header h1 { font-size: 1.8rem; margin-bottom: 0.4rem; }
+    header p { opacity: 0.9; font-size: 0.95rem; }
+
+    .container { max-width: 1150px; margin: 0 auto; padding: 1.5rem 1rem; }
+
+    /* Filters */
+    .controls {
+      background: var(--card);
+      padding: 1.2rem;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      display: grid;
+      grid-template-columns: 2fr 1fr 1.5fr;
+      gap: 0.8rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+    }
+    @media (max-width: 768px) {
+      .controls { grid-template-columns: 1fr; }
+    }
+    input, select {
+      width: 100%;
+      padding: 0.65rem 0.85rem;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-size: 0.95rem;
+      background: white;
+    }
+    input:focus, select:focus { outline: 2px solid var(--primary); border-color: transparent; }
+
+    .stats {
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    /* Book Grid */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.2rem;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    }
+    .badges { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.75rem; }
+    .badge {
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.2rem 0.55rem;
+      border-radius: 4px;
+    }
+    .badge-sem { background: var(--primary-light); color: var(--primary); }
+    .badge-code { background: #f0fdfa; color: var(--accent); border: 1px solid #ccfbf1; }
+    .badge-type { background: #f1f5f9; color: #475569; }
+
+    .card h3 { font-size: 1.08rem; margin-bottom: 0.35rem; color: #0f172a; }
+    .author { font-size: 0.88rem; color: var(--muted); margin-bottom: 0.5rem; }
+    .paper-name {
+      font-size: 0.82rem;
+      color: #334155;
+      background: #f8fafc;
+      padding: 0.45rem 0.6rem;
+      border-radius: 5px;
+      margin-bottom: 1rem;
+      border-left: 3px solid var(--primary);
+    }
+
+    .actions { display: flex; gap: 0.6rem; margin-top: auto; }
+    .btn {
+      flex: 1;
+      text-align: center;
+      text-decoration: none;
+      padding: 0.55rem 0.75rem;
+      border-radius: 6px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      transition: opacity 0.15s;
+    }
+    .btn:hover { opacity: 0.9; }
+    .btn-read { background: var(--primary); color: white; }
+    .btn-download { background: #e2e8f0; color: #1e293b; }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      color: var(--muted);
+      font-size: 0.85rem;
+      margin-top: 2rem;
+      border-top: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>M.Lib.I.Sc. Digital eBook Repository</h1>
+  <p>Vidyasagar University • NEP-2020 Syllabus (2025–2026 Session) • Course Readings & PDFs</p>
+</header>
+
+<div class="container">
+  <div class="controls">
+    <input type="text" id="searchInput" placeholder="Search by book title, author, or topic..." />
+
+    <select id="semFilter">
+      <option value="ALL">All Semesters</option>
+      <option value="General">General / Syllabus</option>
+      <option value="Semester 1">First Semester (501–511)</option>
+      <option value="Semester 2">Second Semester (551–560)</option>
+    </select>
+
+    <select id="paperFilter">
+      <option value="ALL">All Paper Codes</option>
+      <option value="SYLLABUS">SYLLABUS - Curriculum Document</option>
+      <optgroup label="First Semester">
+        <option value="LIS-IKS-501">LIS-IKS-501: Indian Knowledge Organization System</option>
+        <option value="LIS-DSC-502">LIS-DSC-502: Information & Communication Theories</option>
+        <option value="LIS-DSC-503">LIS-DSC-503: Knowledge Organization (Theory)</option>
+        <option value="LIS-DSC-504">LIS-DSC-504: Information Sources, Products & Services</option>
+        <option value="LIS-DSC-505">LIS-DSC-505: Information Representation & Retrieval</option>
+        <option value="LIS-DSC-506">LIS-DSC-506: Management of Information Systems</option>
+        <option value="LIS-DSC-507">LIS-DSC-507: ICT for LIS (Theory) - I</option>
+        <option value="LIS-DSC-508">LIS-DSC-508: Application of ICT in LIS (Practice) - I</option>
+        <option value="LIS-DSC-509">LIS-DSC-509: Research Methodology</option>
+        <option value="LIS-DSE-510A">LIS-DSE-510A: Library Service Platform</option>
+        <option value="LIS-DSE-510B">LIS-DSE-510B: AI/ML in Libraries</option>
+        <option value="LIS-DSE-511A">LIS-DSE-511A: Health Information System</option>
+        <option value="LIS-DSE-511B">LIS-DSE-511B: Legal Information System</option>
+      </optgroup>
+      <optgroup label="Second Semester">
+        <option value="LIS-DSC-551">LIS-DSC-551: Information Policy & Knowledge Economy</option>
+        <option value="LIS-DSC-552">LIS-DSC-552: Intelligent Information Retrieval</option>
+        <option value="LIS-DSC-553">LIS-DSC-553: Studies of Research Metrics</option>
+        <option value="LIS-DSC-554">LIS-DSC-554: Quantitative Techniques in Research</option>
+        <option value="LIS-DSC-555">LIS-DSC-555: ICT for LIS (Theory) - II</option>
+        <option value="LIS-DSC-556">LIS-DSC-556: Application of ICT in LIS (Practice) - II</option>
+        <option value="LIS-SEC-557A">LIS-SEC-557A: Digital Resource Management</option>
+        <option value="LIS-SEC-557B">LIS-SEC-557B: Virtual Learning Management System</option>
+        <option value="LIS-SEC-558A">LIS-SEC-558A: Data Carpentry</option>
+        <option value="LIS-SEC-558B">LIS-SEC-558B: Designing Community Information System</option>
+        <option value="LIS-OJT-559">LIS-OJT-559: Internship Project</option>
+        <option value="LIS-GRP-560">LIS-GRP-560: Guided Research Project</option>
+      </optgroup>
+    </select>
+  </div>
+
+  <div class="stats" id="statsText">Loading repository...</div>
+  <div class="grid" id="bookGrid"></div>
+</div>
+
+<footer>
+  Open Academic Repository for Library & Information Science Students • Powered by GitHub Pages
+</footer>
+
+<script>
+  let allBooks = [];
+
+  async function loadBooks() {
+    try {
+      const response = await fetch('books.json');
+      allBooks = await response.json();
+      renderBooks(allBooks);
+    } catch (error) {
+      document.getElementById('statsText').textContent =
+        'Error loading books.json. Make sure books.json is in the same folder and served via GitHub Pages or a local server.';
+    }
+  }
+
+  function renderBooks(books) {
+    const grid = document.getElementById('bookGrid');
+    const stats = document.getElementById('statsText');
+    stats.textContent = `Showing ${books.length} resource(s)`;
+
+    if (books.length === 0) {
+      grid.innerHTML = '<p>No matching eBooks or study materials found.</p>';
+      return;
+    }
+
+    grid.innerHTML = books.map(book => `
+      <div class="card">
+        <div>
+          <div class="badges">
+            <span class="badge badge-sem">${book.semester}</span>
+            <span class="badge badge-code">${book.paperCode}</span>
+            <span class="badge badge-type">${book.type}</span>
+          </div>
+          <h3>${book.title}</h3>
+          <div class="author">By ${book.author}</div>
+          <div class="paper-name"><strong>Paper:</strong> ${book.paperTitle}</div>
+        </div>
+        <div class="actions">
+          <a href="${book.fileUrl}" target="_blank" rel="noopener" class="btn btn-read">Read PDF</a>
+          <a href="${book.fileUrl}" download class="btn btn-download">Download</a>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  function filterBooks() {
+    const query = document.getElementById('searchInput').value.toLowerCase();
+    const sem = document.getElementById('semFilter').value;
+    const paper = document.getElementById('paperFilter').value;
+
+    const filtered = allBooks.filter(book => {
+      const matchesSearch =
+        book.title.toLowerCase().includes(query) ||
+        book.author.toLowerCase().includes(query) ||
+        book.paperCode.toLowerCase().includes(query) ||
+        book.paperTitle.toLowerCase().includes(query);
+
+      const matchesSem = sem === 'ALL' || book.semester === sem;
+      const matchesPaper = paper === 'ALL' || book.paperCode === paper;
+
+      return matchesSearch && matchesSem && matchesPaper;
+    });
+
+    renderBooks(filtered);
+  }
+
+  document.getElementById('searchInput').addEventListener('input', filterBooks);
+  document.getElementById('semFilter').addEventListener('change', filterBooks);
+  document.getElementById('paperFilter').addEventListener('change', filterBooks);
+
+  loadBooks();
+</script>
+
+</body>
+</html>

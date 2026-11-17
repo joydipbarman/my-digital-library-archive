@@ -1,0 +1,74 @@
+[
+  {
+    "title": "NEP 2020 M.Lib.I.Sc. Official Syllabus (2025–2026)",
+    "author": "Vidyasagar University",
+    "semester": "General",
+    "paperCode": "SYLLABUS",
+    "paperTitle": "Curriculum & Credit Structure",
+    "type": "Syllabus PDF",
+    "fileUrl": "pdfs/syllabus-nep2020.pdf"
+  },
+  {
+    "title": "Prolegomena to Library Classification (3rd Ed.)",
+    "author": "S. R. Ranganathan",
+    "semester": "Semester 1",
+    "paperCode": "LIS-IKS-501",
+    "paperTitle": "Indian Knowledge Organization System",
+    "type": "Reference eBook",
+    "fileUrl": "pdfs/lis-iks-501-prolegomena.pdf"
+  },
+  {
+    "title": "Foundations of Information Science",
+    "author": "David Bawden & Lyn Robinson",
+    "semester": "Semester 1",
+    "paperCode": "LIS-DSC-502",
+    "paperTitle": "Information and Communication Theories",
+    "type": "Reference eBook",
+    "fileUrl": "pdfs/lis-dsc-502-foundations.pdf"
+  },
+  {
+    "title": "Practical Open Source Software for Libraries",
+    "author": "Nicole C. Engard",
+    "semester": "Semester 1",
+    "paperCode": "LIS-DSC-507",
+    "paperTitle": "ICT for LIS (Theory) - I",
+    "type": "Reference eBook",
+    "fileUrl": "pdfs/lis-dsc-507-oss-libraries.pdf"
+  },
+  {
+    "title": "Generative AI and Libraries: Claiming Our Place",
+    "author": "M. Hanegan & C. Rosser",
+    "semester": "Semester 1",
+    "paperCode": "LIS-DSE-510B",
+    "paperTitle": "AI/ML in Libraries",
+    "type": "Elective eBook",
+    "fileUrl": "pdfs/lis-dse-510b-ai-libraries.pdf"
+  },
+  {
+    "title": "Introduction to Modern Information Retrieval",
+    "author": "G. G. Chowdhury",
+    "semester": "Semester 2",
+    "paperCode": "LIS-DSC-552",
+    "paperTitle": "Intelligent Information Retrieval",
+    "type": "Reference eBook",
+    "fileUrl": "pdfs/lis-dsc-552-modern-ir.pdf"
+  },
+  {
+    "title": "Measuring Academic Research: Bibliometric Study Guide",
+    "author": "Ana Andrés",
+    "semester": "Semester 2",
+    "paperCode": "LIS-DSC-553",
+    "paperTitle": "Studies of Research Metrics",
+    "type": "Reference eBook",
+    "fileUrl": "pdfs/lis-dsc-553-bibliometrics.pdf"
+  },
+  {
+    "title": "Library Automation through Koha",
+    "author": "Parthasarathi Mukhopadhyay",
+    "semester": "Semester 2",
+    "paperCode": "LIS-DSC-556",
+    "paperTitle": "Application of ICT in LIS (Practice) - II",
+    "type": "Practical Manual",
+    "fileUrl": "pdfs/lis-dsc-556-koha.pdf"
+  }
+]
